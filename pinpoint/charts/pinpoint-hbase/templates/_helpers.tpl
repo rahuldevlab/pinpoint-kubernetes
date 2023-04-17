@@ -31,4 +31,6 @@ app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
 app.kubernetes.io/instance: {{ .Release.Name | quote }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 app.kubernetes.io/part-of: {{ .Chart.Name }}
+application: "dms"
+environment: "dev"
 {{- end -}}
