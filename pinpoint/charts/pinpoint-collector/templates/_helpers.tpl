@@ -36,6 +36,8 @@ Common labels
 */}}
 {{- define "pinpoint-collector.labels" -}}
 helm.sh/chart: {{ include "pinpoint-collector.chart" . }}
+application: "dms"
+environment: "dev"
 {{ include "pinpoint-collector.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
