@@ -34,6 +34,8 @@ Create chart name and version as used by the chart label.
 Common labels
 */}}
 {{- define "pinpoint-web.labels" -}}
+application: "dms"
+environment: "dev"
 helm.sh/chart: {{ include "pinpoint-web.chart" . }}
 {{ include "pinpoint-web.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
